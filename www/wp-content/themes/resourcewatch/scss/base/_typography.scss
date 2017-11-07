@@ -1,0 +1,64 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $headings-font-family;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -1.52px;
+  margin-bottom: 15px;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  color: $pink;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.75px;
+  margin-bottom: 30px;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  color: $pink;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: -0.46px;
+  margin-bottom: 5px;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1.7em;
+}
+
+a {
+  color: $base-link-color;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

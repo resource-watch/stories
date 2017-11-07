@@ -1,0 +1,44 @@
+html {
+	box-sizing: border-box;
+  height: 100vh;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {max-height: 1000000px;}
+
+body {
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+  min-width: $base-min-width;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height:100%;
+  margin:0;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// google map fix
+.gm-style img {max-width: none}
+
+.page-wrap {
+  width: 100%;
+  display:table-cell;
+  margin:0 auto;
+}
+
+.footer-holder {
+  overflow:hidden; 
+    display:table-footer-group;
+    height:1%;
+}
