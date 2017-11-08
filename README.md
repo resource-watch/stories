@@ -25,7 +25,7 @@ Therefore, this database should be imported into the one that exists in the exte
 The dump of the database isn't saved in this git repository.
 
 ```
-docker exec -i <IMAGE_ID>  mysql -uwordpress -pwordpress wordpress < dump.sql
+docker exec -i <IMAGE_ID>  mysql -uwordpress -pwordpress wordpress -h db < dump.sql
 ```
 
 ## Connecting to the server
