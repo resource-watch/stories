@@ -1,0 +1,33 @@
+.footer {
+	@include font(14px,1.7);
+	font-family: $fira-font;
+	color: $white;
+	background-color: $black-bg;
+	.container {
+		padding: 60px 10px;
+		display: flex;
+	    justify-content: space-between;
+    	align-items: center;
+	}
+}
+
+.footer-content {
+	max-width: 50%;
+	text-align: right;
+	letter-spacing: 0.09px;
+	p {
+		margin-bottom: 0;
+	}
+	strong {
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+}
+
+.footer-logo {
+	max-width: 50%;
+	float: left;
+	img {
+		vertical-align: top;
+	}
+}

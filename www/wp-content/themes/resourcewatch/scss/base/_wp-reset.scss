@@ -1,0 +1,293 @@
+.widget {
+	margin-bottom: $vertical-rhythm;
+	@extend %clearfix;
+	ul {
+		padding-left: 2em;
+	}
+	select {
+		min-width: 150px;
+	}
+}
+
+.comment-form {
+	label {
+		display: block;
+		padding-bottom: 4px;
+	}
+	textarea {
+		overflow: auto;
+		margin: 0;
+		height: 120px;
+		min-height: 120px;
+	}
+	textarea,
+	input[type='text'] {
+		margin: 0 4px 0 0;
+		max-width: 300px;
+		width:100%;
+	}
+	input[type='submit'] {
+		display: block;
+		float: none;
+	}
+}
+
+.post-password-form {
+	label {
+		display: block;
+		margin-bottom:4px;
+	}
+	input[type='password'] {
+		margin: 0 4px 0 0;
+		max-width: 300px;
+		width:100%;
+	}
+}
+
+.search-form {
+	@extend %clearfix;
+	input[type="search"] {
+		padding-right: 25px;
+		margin: 0;
+	}
+}
+
+.post-password-form {
+	p {
+		@extend %clearfix;
+	}
+	input {
+		float: left;
+		height: 2em;
+		&[type='password'] {
+			width: 150px;
+		}
+	}
+}
+
+.comment-form,
+.post-password-form,
+.search-form {
+	input[type='submit'] {
+		background: $btn-background;
+		color: $btn-color;
+		border: none;
+		padding: 0 .5em;
+		border: 1px solid $btn-color;
+		&:hover {
+			background-color: $btn-color;
+			color: $btn-background;
+		}
+	}
+}
+
+.commentlist {
+	margin: 0 0 $vertical-rhythm;
+	.edit-link {
+		margin: 0;
+	}
+	.avatar-holder {
+		float: left;
+		margin: 0 $vertical-rhythm 4px 0;
+	}
+}
+
+.commentlist-item {
+	.commentlist-item {
+		padding: 0;
+		@include media(">=tablet") {
+			padding: 0 0 0 2em;
+		}
+	}
+}
+
+.comment,
+.commentlist-holder {
+	overflow: hidden;
+}
+
+.commentlist-item .commentlist-item,
+.commentlist-item + .commentlist-item {
+	padding-top: $vertical-rhythm;
+}
+
+.widget_calendar {
+	#next {
+		text-align: right;
+	}
+}
+
+.gallery-item {
+	dt {
+		float: none;
+		padding: 0;
+	}
+}
+
+.navigation,
+.navigation-comments {
+	position: relative;
+	vertical-align: middle;
+	margin-bottom: $vertical-rhythm;
+
+	.screen-reader-text {
+		position: absolute;
+		left: -99999px;
+	}
+
+	.page-numbers {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 .4em;
+		@include media('<tablet') {
+			padding:0 3px;
+		}
+	}
+
+	.next,
+	.prev {
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 48%;
+		background: $btn-background;
+		color: $btn-color;
+		padding: .4em;
+		text-decoration: none;
+		@include media('<tablet') {
+			padding:.2em;
+		}
+		&:hover{
+			opacity:0.8;
+		}
+	}
+}
+
+.pager-title {
+	@include font(26px,1.384);
+	color: $pink;
+	font-weight: 300;
+	letter-spacing: -0.46px;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 10px;
+}
+
+.navigation-single{
+	@extend %clearfix;
+	@include font(16px,1.625);
+	background-color: $gray-bg;
+	padding: 102px 0 100px;
+	.next,
+	.prev {
+		float: left;
+		vertical-align: middle;
+		max-width: 48%;
+		color: $text-color;
+		text-decoration: none;
+		a {
+			color: inherit;
+			text-decoration: none;
+			display: block;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	.next {
+		text-align: right;
+		float: right;
+		span:not(.pager-title):after {
+			@extend %icon;
+			content: "\f105";
+			color: $pink;
+			line-height: 1.625;
+			margin-left: 12px;
+			margin-right: 3px;
+		}
+	}
+	.prev {
+		span:not(.pager-title):before {
+			@extend %icon;
+			content: "\f104";
+			color: $pink;
+			line-height: 1.625;
+			margin-right: 10px;
+			margin-left: 3px;
+		}
+	}
+	span {
+		&:hover{
+			color: $pink;
+		}
+	}
+	span:not(.pager-title) {
+		display: block;
+		position: relative;
+		letter-spacing: 0.1px;
+	}
+}
+
+.wp-caption {
+	max-width: 100%;
+	clear: both;
+	border: 1px solid $gray;
+	padding: .4em;
+	margin-bottom: $vertical-rhythm;
+	img {
+		margin: 0;
+		vertical-align: top;
+	}
+	p {
+		margin: .4em 0 0;
+	}
+}
+
+div.aligncenter {
+	margin: 0 auto $vertical-rhythm;
+}
+
+img.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 $vertical-rhythm 4px 0; 
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 4px $vertical-rhythm; 
+}
+
+.mejs-container {
+	margin-bottom: $vertical-rhythm;
+}
+
+.wp-caption-text,
+.gallery,
+.alignnone,
+.gallery-caption,
+.sticky,
+.bypostauthor {
+	height: auto;
+}
+
+iframe {
+	@include media("<desktop") {
+		width:100%;
+	}
+}
+
+#wp-calendar {
+	tbody {
+		td {
+			text-align:center;
+		}
+	}
+	td,
+	th {
+		border:1px solid $gray;
+	}
+}
