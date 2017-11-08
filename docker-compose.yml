@@ -16,7 +16,7 @@ services:
   wordpress:
     build: .
     ports:
-      - "8000:80"
+      - "8888:80"
     restart: always
     depends_on:
       - db
@@ -24,7 +24,6 @@ services:
       - db
     volumes:
       - ./www/wp-content:/var/www/html/wp-content
-      - ./src:/var/www/html/wp-content/themes/resourcewatch
     container_name: rw_stories
     environment:
       WORDPRESS_DB_HOST: db:3306
